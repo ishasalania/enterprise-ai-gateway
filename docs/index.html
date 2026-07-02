@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agentic-AI Platform — Microsoft x RheinEnergie</title>
+    <title>Enterprise Agentic-AI Platform — APIM AI Gateway & Microsoft Foundry</title>
     <style>
         :root {
             --ms-blue: #0078d4;
@@ -17,11 +17,7 @@
             --border-radius: 8px;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -37,29 +33,11 @@
             text-align: center;
         }
 
-        .hero h1 {
-            font-size: 2.8rem;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
+        .hero h1 { font-size: 2.8rem; font-weight: 600; margin-bottom: 12px; }
+        .hero .subtitle { font-size: 1.3rem; opacity: 0.9; max-width: 750px; margin: 0 auto 20px; }
+        .hero .meta { font-size: 0.9rem; opacity: 0.75; }
 
-        .hero .subtitle {
-            font-size: 1.3rem;
-            opacity: 0.9;
-            max-width: 700px;
-            margin: 0 auto 20px;
-        }
-
-        .hero .meta {
-            font-size: 0.9rem;
-            opacity: 0.75;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 24px;
-        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 24px; }
 
         .nav-bar {
             background: var(--ms-dark);
@@ -80,10 +58,7 @@
             transition: opacity 0.2s;
         }
 
-        .nav-bar a:hover {
-            opacity: 1;
-            text-decoration: underline;
-        }
+        .nav-bar a:hover { opacity: 1; text-decoration: underline; }
 
         h2 {
             font-size: 1.8rem;
@@ -93,18 +68,9 @@
             color: var(--ms-dark);
         }
 
-        h3 {
-            font-size: 1.2rem;
-            color: var(--ms-accent);
-            margin-bottom: 8px;
-        }
+        h3 { font-size: 1.2rem; color: var(--ms-accent); margin-bottom: 8px; }
 
-        .req-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 24px;
-            margin-bottom: 48px;
-        }
+        .req-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-bottom: 48px; }
 
         .req-card {
             border: 1px solid #e1dfdd;
@@ -115,54 +81,24 @@
             transition: box-shadow 0.2s;
         }
 
-        .req-card:hover {
-            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-        }
+        .req-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
 
-        .req-card .req-header {
-            display: flex;
-            align-items: flex-start;
-            gap: 16px;
-            margin-bottom: 16px;
-        }
+        .req-card .req-header { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 16px; }
 
         .req-num {
             background: var(--ms-blue);
             color: white;
-            width: 36px;
-            height: 36px;
+            width: 36px; height: 36px;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 0.95rem;
-            flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 0.95rem; flex-shrink: 0;
         }
 
-        .req-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: var(--ms-dark);
-        }
+        .req-title { font-size: 1.3rem; font-weight: 600; color: var(--ms-dark); }
+        .req-subtitle { font-size: 0.9rem; color: #605e5c; font-style: italic; margin-bottom: 12px; }
 
-        .req-subtitle {
-            font-size: 0.9rem;
-            color: #605e5c;
-            font-style: italic;
-            margin-bottom: 12px;
-        }
-
-        .req-body {
-            font-size: 0.95rem;
-            line-height: 1.7;
-            color: #323130;
-            margin-bottom: 16px;
-        }
-
-        .req-body strong {
-            color: var(--ms-dark);
-        }
+        .req-body { font-size: 0.95rem; line-height: 1.7; color: #323130; margin-bottom: 16px; }
+        .req-body strong { color: var(--ms-dark); }
 
         .doc-links {
             background: var(--ms-gray);
@@ -180,53 +116,11 @@
             margin-bottom: 8px;
         }
 
-        .doc-links ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .doc-links li {
-            margin-bottom: 6px;
-        }
-
-        .doc-links a {
-            color: var(--ms-blue);
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-
-        .doc-links a:hover {
-            text-decoration: underline;
-        }
-
-        .doc-links a::before {
-            content: "→ ";
-            opacity: 0.5;
-        }
-
-        .agenda-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0 40px;
-            font-size: 0.95rem;
-        }
-
-        .agenda-table th {
-            background: var(--ms-blue);
-            color: white;
-            padding: 12px 16px;
-            text-align: left;
-            font-weight: 600;
-        }
-
-        .agenda-table td {
-            padding: 12px 16px;
-            border-bottom: 1px solid #e1dfdd;
-        }
-
-        .agenda-table tr:nth-child(even) {
-            background: var(--ms-gray);
-        }
+        .doc-links ul { list-style: none; padding: 0; }
+        .doc-links li { margin-bottom: 6px; }
+        .doc-links a { color: var(--ms-blue); text-decoration: none; font-size: 0.9rem; }
+        .doc-links a:hover { text-decoration: underline; }
+        .doc-links a::before { content: "\2192 "; opacity: 0.5; }
 
         .resources-grid {
             display: grid;
@@ -242,28 +136,10 @@
             background: var(--ms-light);
         }
 
-        .resource-card h4 {
-            font-size: 1rem;
-            margin-bottom: 8px;
-            color: var(--ms-dark);
-        }
-
-        .resource-card p {
-            font-size: 0.85rem;
-            color: #605e5c;
-            margin-bottom: 10px;
-        }
-
-        .resource-card a {
-            color: var(--ms-blue);
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-
-        .resource-card a:hover {
-            text-decoration: underline;
-        }
+        .resource-card h4 { font-size: 1rem; margin-bottom: 8px; color: var(--ms-dark); }
+        .resource-card p { font-size: 0.85rem; color: #605e5c; margin-bottom: 10px; }
+        .resource-card a { color: var(--ms-blue); text-decoration: none; font-size: 0.85rem; font-weight: 600; }
+        .resource-card a:hover { text-decoration: underline; }
 
         .badge {
             display: inline-block;
@@ -273,25 +149,14 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.3px;
+            margin-bottom: 8px;
         }
 
         .badge-docs { background: #e1f5fe; color: #0277bd; }
         .badge-lab { background: #e8f5e9; color: #2e7d32; }
         .badge-arch { background: #f3e5f5; color: #6a1b9a; }
         .badge-repo { background: #fff3e0; color: #e65100; }
-
-        .arch-section {
-            background: var(--ms-gray);
-            border-radius: var(--border-radius);
-            padding: 32px;
-            margin: 20px 0 40px;
-        }
-
-        .arch-section img {
-            max-width: 100%;
-            border-radius: 6px;
-            margin-top: 16px;
-        }
+        .badge-accelerator { background: #fce4ec; color: #c62828; }
 
         .key-points {
             background: linear-gradient(135deg, #f0f6ff 0%, #e8f4fd 100%);
@@ -301,14 +166,89 @@
             margin: 20px 0;
         }
 
-        .key-points ul {
-            padding-left: 20px;
+        .key-points ul { padding-left: 20px; }
+        .key-points li { margin-bottom: 6px; font-size: 0.9rem; }
+
+        .lab-section {
+            border: 1px solid #e1dfdd;
+            border-radius: var(--border-radius);
+            margin-bottom: 24px;
+            overflow: hidden;
         }
 
-        .key-points li {
-            margin-bottom: 6px;
+        .lab-section-header {
+            background: var(--ms-gray);
+            padding: 20px 24px;
+            border-bottom: 1px solid #e1dfdd;
+        }
+
+        .lab-section-header h3 {
+            font-size: 1.3rem;
+            color: var(--ms-dark);
+            margin-bottom: 4px;
+        }
+
+        .lab-section-header p {
+            font-size: 0.9rem;
+            color: #605e5c;
+            margin-bottom: 8px;
+        }
+
+        .lab-section-header a {
+            color: var(--ms-blue);
+            text-decoration: none;
+            font-weight: 600;
             font-size: 0.9rem;
         }
+
+        .lab-section-header a:hover { text-decoration: underline; }
+
+        .lab-section-body { padding: 20px 24px; }
+
+        .lab-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        .lab-table th {
+            text-align: left;
+            padding: 10px 12px;
+            background: var(--ms-gray);
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            color: #605e5c;
+        }
+
+        .lab-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #edebe9;
+            vertical-align: top;
+        }
+
+        .lab-table td:first-child { font-weight: 600; white-space: nowrap; }
+        .lab-table td:first-child a { color: var(--ms-blue); text-decoration: none; }
+        .lab-table td:first-child a:hover { text-decoration: underline; }
+
+        .lab-table .tag {
+            display: inline-block;
+            padding: 1px 6px;
+            border-radius: 3px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-right: 4px;
+        }
+
+        .tag-finops { background: #e8f5e9; color: #2e7d32; }
+        .tag-security { background: #fce4ec; color: #c62828; }
+        .tag-perf { background: #e3f2fd; color: #1565c0; }
+        .tag-obs { background: #fff3e0; color: #e65100; }
+        .tag-agents { background: #f3e5f5; color: #6a1b9a; }
+        .tag-mcp { background: #e0f2f1; color: #00695c; }
+        .tag-multi { background: #fafafa; color: #424242; }
+        .tag-arch { background: #ede7f6; color: #4527a0; }
 
         footer {
             background: var(--ms-dark);
@@ -318,35 +258,34 @@
             font-size: 0.85rem;
         }
 
-        footer a {
-            color: #6cb8f7;
-            text-decoration: none;
-        }
+        footer a { color: #6cb8f7; text-decoration: none; }
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 1.8rem; }
             .hero .subtitle { font-size: 1rem; }
             .container { padding: 24px 16px; }
             .resources-grid { grid-template-columns: 1fr; }
+            .lab-table { font-size: 0.8rem; }
         }
     </style>
 </head>
 <body>
 
 <div class="hero">
-    <h1>Agentic-AI Platform</h1>
-    <p class="subtitle">Requirements → Microsoft Capabilities, Documentation & Architecture</p>
-    <p class="meta">Microsoft × RheinEnergie · Solution Session Content Hub · July 2026</p>
+    <h1>Enterprise Agentic-AI Platform</h1>
+    <p class="subtitle">APIM AI Gateway &middot; Microsoft Foundry &middot; FinOps &middot; Observability &middot; Governance<br>Technical deep-dive with hands-on labs and architecture references</p>
+    <p class="meta">All links are public documentation &mdash; safe to share directly</p>
 </div>
 
 <nav class="nav-bar">
-    <a href="#requirements">9 Requirements</a>
-    <a href="#agenda">90-min Agenda</a>
-    <a href="#architecture">Architecture</a>
+    <a href="#overview">Overview</a>
+    <a href="#requirements">9 Capabilities</a>
     <a href="#apim-gateway">APIM AI Gateway</a>
+    <a href="#labs">Labs &amp; Repos</a>
     <a href="#finops">FinOps</a>
     <a href="#observability">Observability</a>
-    <a href="#resources">All Resources</a>
+    <a href="#governance">Governance &amp; Privacy</a>
+    <a href="#docs">All Documentation</a>
 </nav>
 
 <div class="container">
@@ -355,59 +294,59 @@
     <section id="overview" style="margin-bottom: 48px;">
         <h2>Overview</h2>
         <p style="font-size: 1.05rem; margin-bottom: 16px;">
-            RheinEnergie requires an <strong>enterprise agentic-AI platform</strong> covering the full lifecycle of agent development, orchestration, deployment, and operations — integrated with their existing MuleSoft gateway, observed via Datadog, and governed under DSGVO/GDPR compliance.
+            Building an enterprise <strong>agentic-AI platform</strong> requires a unified approach covering the full lifecycle &mdash; development, orchestration, deployment, and operations &mdash; with central governance, cost control, and integration into existing infrastructure.
         </p>
         <div class="key-points">
-            <strong>Microsoft's answer spans three pillars:</strong>
+            <strong>Microsoft's platform spans three pillars:</strong>
             <ul>
-                <li><strong>Microsoft Foundry</strong> — Build, orchestrate, deploy & operate agents (11,000+ models, Agent Service, tracing, evaluations)</li>
-                <li><strong>Azure API Management AI Gateway</strong> — Central control layer for models, agents & tools (unified model API, MCP/A2A, token governance)</li>
-                <li><strong>Azure Governance & Compliance</strong> — Entra ID, Purview, Content Safety, EU Data Boundary, FinOps toolkit</li>
+                <li><strong>Microsoft Foundry</strong> &mdash; Build, orchestrate, deploy &amp; operate agents (11,000+ models, Agent Service, tracing, evaluations)</li>
+                <li><strong>Azure API Management AI Gateway</strong> &mdash; Central control layer for models, agents &amp; tools (unified model API, MCP/A2A, token governance, multi-provider)</li>
+                <li><strong>Azure Governance &amp; Compliance</strong> &mdash; Entra ID, Purview, Content Safety, EU Data Boundary, FinOps toolkit</li>
             </ul>
         </div>
+        <p style="margin-top: 16px; font-size: 0.95rem;">This page maps <strong>nine enterprise requirements</strong> to Microsoft capabilities, provides direct links to all relevant documentation, and catalogs the <strong>open-source labs, samples, and solution accelerators</strong> available for hands-on implementation.</p>
     </section>
 
     <!-- REQUIREMENTS -->
     <section id="requirements">
-        <h2>Requirements → Microsoft Capabilities</h2>
+        <h2>Enterprise Agentic-AI Platform &mdash; 9 Capabilities</h2>
 
         <div class="req-grid">
 
-            <!-- Req 1 -->
             <div class="req-card">
                 <div class="req-header">
                     <div class="req-num">1</div>
                     <div>
-                        <div class="req-title">AI Lifecycle Plattform</div>
-                        <div class="req-subtitle">Full lifecycle of agentic AI — development, orchestration, deployment, operation.</div>
+                        <div class="req-title">AI Lifecycle Platform</div>
+                        <div class="req-subtitle">Full lifecycle of agentic AI &mdash; development, orchestration, deployment, operation.</div>
                     </div>
                 </div>
                 <div class="req-body">
-                    <strong>Microsoft Foundry</strong> is the unified platform across the whole agentic-AI lifecycle: <strong>build</strong> (Foundry portal, SDKs, VS Code toolkit), <strong>orchestrate</strong> (Foundry Agent Service, multi-agent workflows), <strong>deploy</strong> (managed model & agent deployments), and <strong>operate</strong> (built-in tracing, evaluations, monitoring). A single model catalog of 11,000+ models underpins every stage.
+                    <strong>Microsoft Foundry</strong> is the unified platform across the whole agentic-AI lifecycle: <strong>build</strong> (Foundry portal, SDKs, VS Code toolkit), <strong>orchestrate</strong> (Foundry Agent Service, multi-agent workflows), <strong>deploy</strong> (managed model &amp; agent deployments), and <strong>operate</strong> (built-in tracing, evaluations, monitoring). A single model catalog of 11,000+ models underpins every stage.
                 </div>
                 <div class="doc-links">
                     <div class="label">Documentation</div>
                     <ul>
-                        <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/" target="_blank">Microsoft Foundry — Overview</a></li>
-                        <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure" target="_blank">Foundry Models — Model Catalog</a></li>
-                        <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/agents/overview" target="_blank">Foundry Agent Service — Overview</a></li>
+                        <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/" target="_blank">Microsoft Foundry &mdash; Overview</a></li>
+                        <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure" target="_blank">Foundry Models &mdash; Model Catalog</a></li>
+                        <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/agents/overview" target="_blank">Foundry Agent Service</a></li>
                         <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/observability/how-to/trace-agent-setup" target="_blank">Set up tracing for AI agents</a></li>
                         <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/develop/sdk-overview" target="_blank">Foundry SDKs (Python, C#, JS, Java)</a></li>
+                        <li><a href="https://learn.microsoft.com/en-us/agent-framework/" target="_blank">Microsoft Agent Framework</a></li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Req 2 -->
             <div class="req-card">
                 <div class="req-header">
                     <div class="req-num">2</div>
                     <div>
-                        <div class="req-title">AI Gateway & Integration</div>
-                        <div class="req-subtitle">Central control layer integrated with the existing architecture (esp. MuleSoft API Gateway).</div>
+                        <div class="req-title">AI Gateway &amp; Integration</div>
+                        <div class="req-subtitle">Central control layer integrated with existing architecture (e.g. MuleSoft, other API gateways).</div>
                     </div>
                 </div>
                 <div class="req-body">
-                    The <strong>Azure API Management AI gateway</strong> is the central control layer for model, agent and tool traffic. Its <strong>unified model API</strong> exposes multiple backends (OpenAI, Anthropic, Google Vertex, Amazon Bedrock, Foundry) through one OpenAI-compatible endpoint, with automatic format translation and governance policies applied once across all models. It natively manages remote <strong>MCP servers</strong> and <strong>A2A agent APIs</strong>. It complements the existing <strong>MuleSoft</strong> gateway: MuleSoft's AI connectors (MCP, A2A, LLM) expose RheinEnergie's enterprise systems as governed tools to agents, while APIM governs the model/agent layer.
+                    The <strong>Azure API Management AI gateway</strong> is the central control layer for model, agent and tool traffic. Its <strong>unified model API</strong> exposes multiple backends (OpenAI, Anthropic, Google Vertex, Amazon Bedrock, Foundry) through one OpenAI-compatible endpoint, with automatic format translation and governance policies applied once across all models. It natively manages remote <strong>MCP servers</strong> and <strong>A2A agent APIs</strong>. It complements existing API gateways: MuleSoft's AI connectors (MCP, A2A, LLM) expose enterprise systems as governed tools to agents, while APIM governs the model/agent layer.
                 </div>
                 <div class="doc-links">
                     <div class="label">Documentation</div>
@@ -422,55 +361,54 @@
                 </div>
             </div>
 
-            <!-- Req 3 -->
             <div class="req-card">
                 <div class="req-header">
                     <div class="req-num">3</div>
                     <div>
                         <div class="req-title">Observability</div>
-                        <div class="req-subtitle">End-to-end logging, tracing and monitoring over Datadog (OpenTelemetry-based).</div>
+                        <div class="req-subtitle">End-to-end logging, tracing and monitoring (OpenTelemetry-based), exportable to Datadog or any OTel collector.</div>
                     </div>
                 </div>
                 <div class="req-body">
-                    Foundry emits telemetry using <strong>OpenTelemetry</strong> semantic conventions and stores traces in Azure Monitor Application Insights; <strong>server-side tracing turns on automatically with no code changes</strong> and captures latency, exceptions, token counts, tool calls and (optionally) prompt content. Because the pipeline is OpenTelemetry-based, the same traces export to <strong>Datadog</strong>. Datadog additionally ships native integrations for Azure OpenAI and Azure AI Foundry plus <strong>LLM Observability</strong> — end-to-end latency, errors, I/O messages and token usage.
+                    Foundry emits telemetry using <strong>OpenTelemetry</strong> semantic conventions and stores traces in Azure Monitor Application Insights; <strong>server-side tracing turns on automatically with no code changes</strong> and captures latency, exceptions, token counts, tool calls and (optionally) prompt content. Because the pipeline is OpenTelemetry-based, the same traces export to <strong>any OTLP-compatible collector</strong> (Datadog, Grafana, Splunk, etc.). Datadog ships native integrations for Azure OpenAI and Azure AI Foundry plus <strong>LLM Observability</strong>.
                 </div>
                 <div class="doc-links">
                     <div class="label">Documentation</div>
                     <ul>
                         <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/observability/how-to/trace-agent-setup" target="_blank">Foundry tracing (OpenTelemetry) setup</a></li>
                         <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/observability/how-to/how-to-monitor-agents-dashboard" target="_blank">Monitor generative AI applications</a></li>
-                        <li><a href="https://docs.datadoghq.com/integrations/azure_ai_foundry/" target="_blank">Datadog — Azure AI Foundry integration</a></li>
-                        <li><a href="https://docs.datadoghq.com/integrations/azure_openai/" target="_blank">Datadog — Azure OpenAI integration</a></li>
-                        <li><a href="https://docs.datadoghq.com/llm_observability/" target="_blank">Datadog — LLM Observability</a></li>
+                        <li><a href="https://learn.microsoft.com/en-us/azure/api-management/api-management-howto-llm-logs" target="_blank">APIM &mdash; Logging token usage &amp; completions</a></li>
+                        <li><a href="https://docs.datadoghq.com/integrations/azure_ai_foundry/" target="_blank">Datadog &mdash; Azure AI Foundry integration</a></li>
+                        <li><a href="https://docs.datadoghq.com/llm_observability/" target="_blank">Datadog &mdash; LLM Observability</a></li>
+                        <li><a href="https://opentelemetry.io/docs/specs/semconv/gen-ai/" target="_blank">OpenTelemetry GenAI semantic conventions</a></li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Req 4 -->
             <div class="req-card">
                 <div class="req-header">
                     <div class="req-num">4</div>
                     <div>
                         <div class="req-title">FinOps</div>
-                        <div class="req-subtitle">Granular cost measurement & control — per use case (across agents) and per agent.</div>
+                        <div class="req-subtitle">Granular cost measurement &amp; control &mdash; per use case (across agents) and per agent.</div>
                     </div>
                 </div>
                 <div class="req-body">
-                    Token usage is metered natively — Foundry / Azure OpenAI emit input, output and total token counts per deployment. The APIM AI gateway's <strong>emit-token-metric</strong> policy attaches custom dimensions (use-case ID, agent ID, team) to every call, so cost is attributable <strong>per use case</strong> (across multiple agents) and <strong>per individual agent</strong>. The <strong>token-limit</strong> policy enforces budgets/quotas, and the Microsoft <strong>FinOps toolkit / FinOps hubs (FOCUS)</strong> consolidate and analyze the spend.
+                    Token usage is metered natively &mdash; Foundry / Azure OpenAI emit input, output and total token counts per deployment. The APIM AI gateway's <strong>emit-token-metric</strong> policy attaches custom dimensions (use-case ID, agent ID, team) to every call, so cost is attributable <strong>per use case</strong> (across multiple agents) and <strong>per individual agent</strong>. The <strong>token-limit</strong> policy enforces budgets/quotas, and the Microsoft <strong>FinOps toolkit / FinOps hubs (FOCUS)</strong> consolidate and analyze the spend.
                 </div>
                 <div class="doc-links">
                     <div class="label">Documentation</div>
                     <ul>
-                        <li><a href="https://learn.microsoft.com/en-us/azure/api-management/llm-emit-token-metric-policy" target="_blank">APIM — emit-token-metric policy</a></li>
-                        <li><a href="https://learn.microsoft.com/en-us/azure/api-management/llm-token-limit-policy" target="_blank">APIM — token-limit policy</a></li>
-                        <li><a href="https://learn.microsoft.com/en-us/azure/api-management/api-management-howto-llm-logs" target="_blank">Logging token usage, prompts & completions</a></li>
+                        <li><a href="https://learn.microsoft.com/en-us/azure/api-management/llm-emit-token-metric-policy" target="_blank">APIM &mdash; emit-token-metric policy</a></li>
+                        <li><a href="https://learn.microsoft.com/en-us/azure/api-management/llm-token-limit-policy" target="_blank">APIM &mdash; token-limit policy</a></li>
+                        <li><a href="https://learn.microsoft.com/en-us/azure/api-management/api-management-howto-llm-logs" target="_blank">Logging token usage, prompts &amp; completions</a></li>
                         <li><a href="https://microsoft.github.io/finops-toolkit/" target="_blank">Microsoft FinOps toolkit</a></li>
                         <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/control-plane/how-to-enforce-limits-models" target="_blank">Enforce token limits for models (Foundry)</a></li>
+                        <li><a href="https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/finops-framework" target="_blank">Lab: FinOps Framework (AI-Gateway)</a></li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Req 5 -->
             <div class="req-card">
                 <div class="req-header">
                     <div class="req-num">5</div>
@@ -480,22 +418,21 @@
                     </div>
                 </div>
                 <div class="req-body">
-                    Central policy control spans identity, access, limits, safety and compliance: <strong>APIM</strong> applies security and governance policies once across every model; <strong>Azure Policy</strong> controls which model publishers may be deployed; <strong>Microsoft Entra ID</strong> (including agent identity / Entra Agent ID) governs authentication and access; <strong>Microsoft Purview</strong> provides data governance and compliance; <strong>Azure AI Content Safety</strong> adds guardrails. Microsoft also publishes concrete guidance for securing agentic / MCP workloads.
+                    Central policy control spans identity, access, limits, safety and compliance: <strong>APIM</strong> applies security and governance policies once across every model; <strong>Azure Policy</strong> controls which model publishers may be deployed; <strong>Microsoft Entra ID</strong> (including Entra Agent ID) governs authentication and access; <strong>Microsoft Purview</strong> provides data governance and compliance; <strong>Azure AI Content Safety</strong> adds guardrails. Microsoft also publishes concrete guidance for securing agentic / MCP workloads.
                 </div>
                 <div class="doc-links">
                     <div class="label">Documentation</div>
                     <ul>
-                        <li><a href="https://learn.microsoft.com/en-us/azure/api-management/api-management-authenticate-authorize-ai-apis" target="_blank">APIM — Authenticate & authorize AI APIs</a></li>
-                        <li><a href="https://learn.microsoft.com/en-us/azure/api-management/llm-content-safety-policy" target="_blank">APIM — Content Safety policy</a></li>
+                        <li><a href="https://learn.microsoft.com/en-us/azure/api-management/api-management-authenticate-authorize-ai-apis" target="_blank">APIM &mdash; Authenticate &amp; authorize AI APIs</a></li>
+                        <li><a href="https://learn.microsoft.com/en-us/azure/api-management/llm-content-safety-policy" target="_blank">APIM &mdash; Content Safety policy</a></li>
                         <li><a href="https://learn.microsoft.com/en-us/azure/api-management/secure-mcp-servers" target="_blank">Secure access to MCP servers</a></li>
-                        <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/control-plane/overview" target="_blank">Foundry Control Plane — Governance</a></li>
+                        <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/control-plane/overview" target="_blank">Foundry Control Plane &mdash; Governance</a></li>
                         <li><a href="https://www.microsoft.com/en-us/security/blog/2025/05/01/securing-ai-agents/" target="_blank">Securing AI agents (Microsoft Security blog)</a></li>
-                        <li><a href="https://learn.microsoft.com/en-us/azure/ai-services/content-safety/overview" target="_blank">Azure AI Content Safety — Overview</a></li>
+                        <li><a href="https://learn.microsoft.com/en-us/azure/ai-services/content-safety/overview" target="_blank">Azure AI Content Safety</a></li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Req 6 -->
             <div class="req-card">
                 <div class="req-header">
                     <div class="req-num">6</div>
@@ -505,87 +442,87 @@
                     </div>
                 </div>
                 <div class="req-body">
-                    Foundry's OpenTelemetry tracing records each <strong>agent run</strong> — tool calls, run steps, inputs/outputs and hand-offs — giving transparent traceability of <strong>agent-to-agent flows</strong>. At the gateway, APIM natively manages <strong>A2A agent APIs</strong> and <strong>MCP servers</strong>, so cross-agent interactions are mediated, logged and governed centrally, building on the open MCP and A2A standards (also supported by MuleSoft's connectors).
+                    Foundry's OpenTelemetry tracing records each <strong>agent run</strong> &mdash; tool calls, run steps, inputs/outputs and hand-offs &mdash; giving transparent traceability of <strong>agent-to-agent flows</strong>. At the gateway, APIM natively manages <strong>A2A agent APIs</strong> and <strong>MCP servers</strong>, so cross-agent interactions are mediated, logged and governed centrally, building on the open MCP and A2A standards.
                 </div>
                 <div class="doc-links">
                     <div class="label">Documentation</div>
                     <ul>
-                        <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/observability/how-to/trace-agent-setup" target="_blank">Foundry agent tracing & run steps</a></li>
-                        <li><a href="https://learn.microsoft.com/en-us/azure/api-management/agent-to-agent-api" target="_blank">APIM — A2A agent API management</a></li>
-                        <li><a href="https://learn.microsoft.com/en-us/azure/api-management/export-rest-mcp-server" target="_blank">APIM — MCP server management</a></li>
+                        <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/observability/how-to/trace-agent-setup" target="_blank">Foundry agent tracing &amp; run steps</a></li>
+                        <li><a href="https://learn.microsoft.com/en-us/azure/api-management/agent-to-agent-api" target="_blank">APIM &mdash; A2A agent API management</a></li>
+                        <li><a href="https://learn.microsoft.com/en-us/azure/api-management/export-rest-mcp-server" target="_blank">APIM &mdash; MCP server management</a></li>
                         <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/control-plane/how-to-manage-agents" target="_blank">Manage agents at scale (Control Plane)</a></li>
                         <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/control-plane/register-custom-agent" target="_blank">Register custom agents in Foundry</a></li>
+                        <li><a href="https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/mcp-a2a-agents" target="_blank">Lab: A2A-Enabled Agents with MCP</a></li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Req 7 -->
             <div class="req-card">
                 <div class="req-header">
                     <div class="req-num">7</div>
                     <div>
-                        <div class="req-title">Data Privacy / DSGVO Layer</div>
-                        <div class="req-subtitle">Abstraction layer separating metadata from content — analyze communication without accessing prompt contents.</div>
+                        <div class="req-title">Data Privacy / GDPR Layer</div>
+                        <div class="req-subtitle">Abstraction layer separating metadata from content &mdash; analyze communication without accessing prompt contents.</div>
                     </div>
                 </div>
                 <div class="req-body">
-                    By default, Foundry tracing captures <strong>only metadata</strong> (model name, token counts, latency, status) and <strong>does not record message content</strong>. Content recording is strictly opt-in via explicit flags (both default <code>false</code>). You can therefore analyze communication flows, volumes, latency and cost <strong>without accessing prompt contents</strong> — exactly the requested abstraction. This is reinforced by the <strong>EU Data Boundary</strong> (customer & pseudonymized personal data stored/processed in the EU/EFTA; GDPR Art. 4(5) pseudonymization of system logs), Foundry <strong>data zones</strong>, and <strong>Microsoft Purview</strong>. Microsoft does not use customer data to train shared models.
+                    By default, Foundry tracing captures <strong>only metadata</strong> (model name, token counts, latency, status) and <strong>does not record message content</strong>. Content recording is strictly opt-in via explicit flags (both default <code>false</code>). You can therefore analyze communication flows, volumes, latency and cost <strong>without accessing prompt contents</strong>. This is reinforced by the <strong>EU Data Boundary</strong> (customer &amp; pseudonymized personal data stored/processed in the EU/EFTA; GDPR Art. 4(5) pseudonymization of system logs), Foundry <strong>data zones</strong>, and <strong>Microsoft Purview</strong>. Microsoft does not use customer data to train shared models.
                 </div>
                 <div class="doc-links">
                     <div class="label">Documentation</div>
                     <ul>
-                        <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/observability/how-to/trace-agent-setup" target="_blank">Foundry tracing — content-recording flags (metadata vs. content)</a></li>
+                        <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/observability/how-to/trace-agent-setup" target="_blank">Foundry tracing &mdash; content-recording flags</a></li>
                         <li><a href="https://www.microsoft.com/en-us/trust-center/privacy/european-data-boundary-eudb" target="_blank">Microsoft EU Data Boundary (Trust Center)</a></li>
-                        <li><a href="https://learn.microsoft.com/en-us/privacy/eudb/eu-data-boundary-learn" target="_blank">What is the EU Data Boundary? (Microsoft Learn)</a></li>
-                        <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/responsible-use-of-ai-overview" target="_blank">Responsible AI & Data Privacy (Foundry)</a></li>
+                        <li><a href="https://learn.microsoft.com/en-us/privacy/eudb/eu-data-boundary-learn" target="_blank">What is the EU Data Boundary?</a></li>
+                        <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/responsible-use-of-ai-overview" target="_blank">Responsible AI &amp; Data Privacy (Foundry)</a></li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Req 8 -->
             <div class="req-card">
                 <div class="req-header">
                     <div class="req-num">8</div>
                     <div>
-                        <div class="req-title">Multi-Provider Architektur</div>
-                        <div class="req-subtitle">Support for multiple LLM providers — Microsoft Foundry, third-party, local models, own platforms.</div>
+                        <div class="req-title">Multi-Provider Architecture</div>
+                        <div class="req-subtitle">Support for multiple LLM providers &mdash; Microsoft Foundry, third-party, local models, own platforms.</div>
                     </div>
                 </div>
                 <div class="req-body">
-                    Foundry's <strong>model catalog</strong> spans OpenAI, Anthropic (Claude, now GA on Azure), Meta Llama, Mistral, DeepSeek, xAI Grok, Cohere, Hugging Face, NVIDIA and more — all under one Azure identity, billing and governance. <strong>Model router</strong> exposes many providers through a single deployment; <strong>Foundry Local</strong> runs open models on-device / on-prem for private, low-latency use; and APIM's <strong>unified model API</strong> brings third-party and self-hosted ("own platform") endpoints under the same OpenAI-compatible interface.
+                    Foundry's <strong>model catalog</strong> spans OpenAI, Anthropic (Claude, GA on Azure), Meta Llama, Mistral, DeepSeek, xAI Grok, Cohere, Hugging Face, NVIDIA and more &mdash; all under one Azure identity, billing and governance. <strong>Model router</strong> exposes many providers through a single deployment; <strong>Foundry Local</strong> runs open models on-device / on-prem for private, low-latency use; and APIM's <strong>unified model API</strong> brings third-party and self-hosted endpoints under the same OpenAI-compatible interface. APIM also natively supports <strong>Amazon Bedrock</strong> and <strong>Google Vertex AI</strong>.
                 </div>
                 <div class="doc-links">
                     <div class="label">Documentation</div>
                     <ul>
                         <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure" target="_blank">Foundry model catalog (multi-provider)</a></li>
                         <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-models/concepts/model-router" target="_blank">Model router for Microsoft Foundry</a></li>
-                        <li><a href="https://learn.microsoft.com/en-us/azure/api-management/unified-model-api" target="_blank">APIM — Unified model API</a></li>
-                        <li><a href="https://learn.microsoft.com/en-us/azure/foundry-local/get-started" target="_blank">Foundry Local — Run LLMs on-device</a></li>
+                        <li><a href="https://learn.microsoft.com/en-us/azure/api-management/unified-model-api" target="_blank">APIM &mdash; Unified model API</a></li>
+                        <li><a href="https://learn.microsoft.com/en-us/azure/foundry-local/get-started" target="_blank">Foundry Local &mdash; Run LLMs on-device</a></li>
                         <li><a href="https://learn.microsoft.com/en-us/azure/api-management/openai-compatible-llm-api" target="_blank">Import any OpenAI-compatible LLM API</a></li>
+                        <li><a href="https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/aws-bedrock" target="_blank">Lab: AWS Bedrock via AI Gateway</a></li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Req 9 -->
             <div class="req-card">
                 <div class="req-header">
                     <div class="req-num">9</div>
                     <div>
                         <div class="req-title">Cost Efficiency</div>
-                        <div class="req-subtitle">Technical mechanisms for optimization — routing, limiting, efficient model selection.</div>
+                        <div class="req-subtitle">Technical mechanisms for optimization &mdash; routing, limiting, efficient model selection.</div>
                     </div>
                 </div>
                 <div class="req-body">
-                    <strong>Model router</strong> analyzes each prompt in real time and routes to the most cost-effective model that still meets quality, with <strong>Balanced / Cost / Quality modes</strong> and reasoning-vs-non-reasoning selection — one deployment, lower spend. At the gateway, <strong>token-limit policies</strong> cap consumption, <strong>semantic caching</strong> avoids repeat inference, and <strong>load balancing</strong> spreads traffic across backends. Prompt caching and PTU-vs-pay-as-you-go options further optimize unit cost.
+                    <strong>Model router</strong> analyzes each prompt in real time and routes to the most cost-effective model that still meets quality, with <strong>Balanced / Cost / Quality modes</strong> and reasoning-vs-non-reasoning selection &mdash; one deployment, lower spend. At the gateway, <strong>token-limit policies</strong> cap consumption, <strong>semantic caching</strong> avoids repeat inference, and <strong>load balancing</strong> spreads traffic across backends. Prompt caching and PTU-vs-pay-as-you-go options further optimize unit cost.
                 </div>
                 <div class="doc-links">
                     <div class="label">Documentation</div>
                     <ul>
-                        <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-models/concepts/model-router" target="_blank">Model router — routing modes & cost savings</a></li>
-                        <li><a href="https://learn.microsoft.com/en-us/azure/api-management/azure-openai-enable-semantic-caching" target="_blank">APIM — Semantic caching for LLM APIs</a></li>
-                        <li><a href="https://learn.microsoft.com/en-us/azure/api-management/backends" target="_blank">APIM — Load balancing backends</a></li>
-                        <li><a href="https://learn.microsoft.com/en-us/azure/api-management/llm-token-limit-policy" target="_blank">APIM — Token limit policy</a></li>
-                        <li><a href="https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/provisioned-throughput" target="_blank">PTU (Provisioned Throughput) vs. Pay-as-you-go</a></li>
+                        <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-models/concepts/model-router" target="_blank">Model router &mdash; routing modes &amp; cost savings</a></li>
+                        <li><a href="https://learn.microsoft.com/en-us/azure/api-management/azure-openai-enable-semantic-caching" target="_blank">APIM &mdash; Semantic caching for LLM APIs</a></li>
+                        <li><a href="https://learn.microsoft.com/en-us/azure/api-management/backends" target="_blank">APIM &mdash; Load balancing backends</a></li>
+                        <li><a href="https://learn.microsoft.com/en-us/azure/api-management/llm-token-limit-policy" target="_blank">APIM &mdash; Token limit policy</a></li>
+                        <li><a href="https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/provisioned-throughput" target="_blank">PTU vs. Pay-as-you-go</a></li>
+                        <li><a href="https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/semantic-caching" target="_blank">Lab: Semantic Caching</a></li>
                     </ul>
                 </div>
             </div>
@@ -593,135 +530,393 @@
         </div>
     </section>
 
-    <!-- AGENDA -->
-    <section id="agenda" style="margin-bottom: 48px;">
-        <h2>Suggested 90-Minute Session Flow</h2>
-        <table class="agenda-table">
-            <thead>
-                <tr>
-                    <th>Time</th>
-                    <th>Segment</th>
-                    <th>Key Content</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>00:00–10</td>
-                    <td>Context & the agentic-enterprise vision</td>
-                    <td>Building Blocks of an Agentic AI Platform (live)</td>
-                </tr>
-                <tr>
-                    <td>10–20</td>
-                    <td>Platform overview: Foundry lifecycle + latest announcements</td>
-                    <td>Build 2026 — AI Agents & Apps deck</td>
-                </tr>
-                <tr>
-                    <td>20–35</td>
-                    <td>AI Gateway & MuleSoft integration</td>
-                    <td>Req. 2 · APIM AI gateway docs</td>
-                </tr>
-                <tr>
-                    <td>35–45</td>
-                    <td>Observability with Datadog / OpenTelemetry</td>
-                    <td>Req. 3 · Datadog + Foundry tracing</td>
-                </tr>
-                <tr>
-                    <td>45–55</td>
-                    <td>FinOps & cost efficiency (token metering, model router)</td>
-                    <td>Req. 4 & 9</td>
-                </tr>
-                <tr>
-                    <td>55–1:05</td>
-                    <td>Governance & agent tracking (Entra, Purview, A2A/MCP)</td>
-                    <td>Req. 5 & 6</td>
-                </tr>
-                <tr>
-                    <td>1:05–1:15</td>
-                    <td>Data privacy / DSGVO layer (metadata vs. content, EU Data Boundary)</td>
-                    <td>Req. 7 · Sovereign AI</td>
-                </tr>
-                <tr>
-                    <td>1:15–1:25</td>
-                    <td>Multi-provider architecture & RheinEnergie fit</td>
-                    <td>Req. 8 · model catalog</td>
-                </tr>
-                <tr>
-                    <td>1:25–1:30</td>
-                    <td>Next steps — discovery workshop</td>
-                    <td>Discovery Workshop Playbook</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-
-    <!-- APIM AI GATEWAY DEEP DIVE -->
+    <!-- APIM AI GATEWAY -->
     <section id="apim-gateway" style="margin-bottom: 48px;">
-        <h2>APIM AI Gateway — Deep Dive</h2>
-        <p style="margin-bottom: 20px;">The AI gateway in Azure API Management is the central nervous system for all AI traffic. Here's how each capability maps to RheinEnergie's requirements:</p>
+        <h2>APIM AI Gateway &mdash; Capability Map</h2>
+        <p style="margin-bottom: 20px;">The AI gateway in Azure API Management is the central nervous system for all AI traffic. Each capability card below links directly to documentation.</p>
 
         <div class="resources-grid">
             <div class="resource-card">
+                <span class="badge badge-docs">Core</span>
                 <h4>Unified Model API</h4>
-                <p>Single OpenAI-compatible endpoint exposing OpenAI, Anthropic, Google Vertex, Bedrock & Foundry models. Automatic format translation.</p>
-                <a href="https://learn.microsoft.com/en-us/azure/api-management/unified-model-api" target="_blank">Documentation →</a>
+                <p>Single OpenAI-compatible endpoint exposing OpenAI, Anthropic, Google Vertex, Bedrock &amp; Foundry. Automatic format translation across providers.</p>
+                <a href="https://learn.microsoft.com/en-us/azure/api-management/unified-model-api" target="_blank">Documentation &rarr;</a>
             </div>
             <div class="resource-card">
+                <span class="badge badge-lab">MCP</span>
                 <h4>MCP Server Management</h4>
-                <p>Expose REST APIs as MCP servers or govern existing MCP servers. Centralized tool registry with security policies.</p>
-                <a href="https://learn.microsoft.com/en-us/azure/api-management/export-rest-mcp-server" target="_blank">Documentation →</a>
+                <p>Expose REST APIs as MCP servers or govern existing MCP servers. Centralized tool registry with OAuth credential management.</p>
+                <a href="https://learn.microsoft.com/en-us/azure/api-management/export-rest-mcp-server" target="_blank">Documentation &rarr;</a>
             </div>
             <div class="resource-card">
+                <span class="badge badge-lab">A2A</span>
                 <h4>A2A Agent APIs</h4>
                 <p>Import and manage Agent-to-Agent APIs. Central mediation, logging and governance for cross-agent flows.</p>
-                <a href="https://learn.microsoft.com/en-us/azure/api-management/agent-to-agent-api" target="_blank">Documentation →</a>
+                <a href="https://learn.microsoft.com/en-us/azure/api-management/agent-to-agent-api" target="_blank">Documentation &rarr;</a>
             </div>
             <div class="resource-card">
-                <h4>Token Metrics & Limits</h4>
-                <p>emit-token-metric with custom dimensions (use-case ID, agent ID, team). token-limit for budget enforcement.</p>
-                <a href="https://learn.microsoft.com/en-us/azure/api-management/llm-emit-token-metric-policy" target="_blank">Documentation →</a>
+                <span class="badge badge-repo">FinOps</span>
+                <h4>Token Metrics &amp; Limits</h4>
+                <p>emit-token-metric with custom dimensions (use-case ID, agent ID, team). token-limit for budget enforcement per consumer.</p>
+                <a href="https://learn.microsoft.com/en-us/azure/api-management/llm-emit-token-metric-policy" target="_blank">Documentation &rarr;</a>
             </div>
             <div class="resource-card">
+                <span class="badge badge-arch">Performance</span>
                 <h4>Semantic Caching</h4>
-                <p>Cache LLM completions by semantic similarity. Reduces repeat inference calls, lowers cost & latency.</p>
-                <a href="https://learn.microsoft.com/en-us/azure/api-management/azure-openai-enable-semantic-caching" target="_blank">Documentation →</a>
+                <p>Cache LLM completions by semantic similarity using Azure Managed Redis. Reduces repeat inference, lowers cost &amp; latency.</p>
+                <a href="https://learn.microsoft.com/en-us/azure/api-management/azure-openai-enable-semantic-caching" target="_blank">Documentation &rarr;</a>
             </div>
             <div class="resource-card">
-                <h4>Load Balancing & Circuit Breaker</h4>
-                <p>Round-robin, weighted, priority-based, session-aware LB. Circuit breaker with Retry-After awareness.</p>
-                <a href="https://learn.microsoft.com/en-us/azure/api-management/backends" target="_blank">Documentation →</a>
+                <span class="badge badge-arch">Resilience</span>
+                <h4>Load Balancing &amp; Circuit Breaker</h4>
+                <p>Round-robin, weighted, priority-based, session-aware LB. Circuit breaker with dynamic Retry-After awareness.</p>
+                <a href="https://learn.microsoft.com/en-us/azure/api-management/backends" target="_blank">Documentation &rarr;</a>
             </div>
             <div class="resource-card">
-                <h4>Content Safety</h4>
-                <p>Inline content moderation policy using Azure AI Content Safety. Blocks harmful prompts before they reach models.</p>
-                <a href="https://learn.microsoft.com/en-us/azure/api-management/llm-content-safety-policy" target="_blank">Documentation →</a>
+                <span class="badge badge-accelerator">Safety</span>
+                <h4>Content Safety Policy</h4>
+                <p>Inline content moderation using Azure AI Content Safety. Blocks harmful prompts before they reach models.</p>
+                <a href="https://learn.microsoft.com/en-us/azure/api-management/llm-content-safety-policy" target="_blank">Documentation &rarr;</a>
             </div>
             <div class="resource-card">
-                <h4>AI Gateway in Foundry</h4>
-                <p>Govern models, agents & tools directly from the Foundry portal. Unified control plane experience.</p>
-                <a href="https://learn.microsoft.com/en-us/azure/ai-foundry/configuration/enable-ai-api-management-gateway-portal" target="_blank">Documentation →</a>
+                <span class="badge badge-docs">Integration</span>
+                <h4>AI Gateway in Foundry Portal</h4>
+                <p>Govern models, agents &amp; tools directly from the Foundry portal. Register agents running anywhere &mdash; Azure, other clouds, on-prem.</p>
+                <a href="https://learn.microsoft.com/en-us/azure/ai-foundry/configuration/enable-ai-api-management-gateway-portal" target="_blank">Documentation &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- LABS & REPOS -->
+    <section id="labs" style="margin-bottom: 48px;">
+        <h2>Open Source Labs, Samples &amp; Accelerators</h2>
+        <p style="margin-bottom: 24px;">Hands-on repositories with deployable infrastructure, Jupyter notebooks, Bicep templates, and APIM policies. Each lab is self-contained and can be deployed to your Azure subscription.</p>
+
+        <!-- AI Gateway Labs -->
+        <div class="lab-section">
+            <div class="lab-section-header">
+                <h3>AI Gateway Labs</h3>
+                <p>30+ hands-on labs covering the enterprise AI gateway for Models, Tools, and Agents. Each lab includes a Jupyter notebook, Bicep infrastructure, and APIM policies. Aligned to Azure Well-Architected Framework. &star; 948 stars</p>
+                <a href="https://github.com/Azure-Samples/AI-Gateway" target="_blank">github.com/Azure-Samples/AI-Gateway</a> &middot; <a href="https://aka.ms/ai-gateway/labs" target="_blank">aka.ms/ai-gateway/labs</a>
+            </div>
+            <div class="lab-section-body">
+                <h4 style="margin-bottom: 12px; color: var(--ms-dark);">AI Gateway for Models</h4>
+                <table class="lab-table">
+                    <thead><tr><th>Lab</th><th>What it does</th><th>Addresses</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/backend-pool-load-balancing" target="_blank">Backend Pool Load Balancing</a></td>
+                            <td>Distribute requests across multiple model endpoints with priority-based routing and automatic failover</td>
+                            <td><span class="tag tag-perf">Performance</span><span class="tag tag-finops">Cost</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/token-rate-limiting" target="_blank">Token Rate Limiting</a></td>
+                            <td>Control token consumption with TPM limits per consumer &mdash; subscription key, IP, or arbitrary key</td>
+                            <td><span class="tag tag-finops">FinOps</span><span class="tag tag-security">Governance</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/token-metrics-emitting" target="_blank">Token Metrics Emitting</a></td>
+                            <td>Emit token usage metrics with custom dimensions (agent ID, use-case, team) to Azure Monitor</td>
+                            <td><span class="tag tag-finops">FinOps</span><span class="tag tag-obs">Observability</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/semantic-caching" target="_blank">Semantic Caching</a></td>
+                            <td>Cache responses using vector similarity for faster, cheaper completions &mdash; reduces repeat inference</td>
+                            <td><span class="tag tag-perf">Performance</span><span class="tag tag-finops">Cost</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/model-routing" target="_blank">Model Routing</a></td>
+                            <td>Route requests to different backends based on model, version, or request attributes</td>
+                            <td><span class="tag tag-multi">Multi-Provider</span><span class="tag tag-finops">Cost</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/finops-framework" target="_blank">FinOps Framework</a></td>
+                            <td>Complete framework for managing AI budgets with automated quota controls, cost allocation &amp; reporting</td>
+                            <td><span class="tag tag-finops">FinOps</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/built-in-logging" target="_blank">Built-in Logging</a></td>
+                            <td>Enable logging for LLM APIs &mdash; track token usage, prompts, and completions for billing &amp; auditing</td>
+                            <td><span class="tag tag-obs">Observability</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/aws-bedrock" target="_blank">AWS Bedrock</a></td>
+                            <td>Manage Amazon Bedrock models through the same APIM gateway with unified policies</td>
+                            <td><span class="tag tag-multi">Multi-Provider</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/gemini-models" target="_blank">Google Gemini Models</a></td>
+                            <td>Integrate Google Gemini models via the APIM AI gateway</td>
+                            <td><span class="tag tag-multi">Multi-Provider</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/self-hosted-ollama" target="_blank">Self-Hosted Ollama</a></td>
+                            <td>Govern self-hosted/local Ollama models through the same gateway policies</td>
+                            <td><span class="tag tag-multi">Multi-Provider</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4 style="margin: 24px 0 12px; color: var(--ms-dark);">AI Gateway for Tools (MCP)</h4>
+                <table class="lab-table">
+                    <thead><tr><th>Lab</th><th>What it does</th><th>Addresses</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/model-context-protocol" target="_blank">Model Context Protocol (MCP)</a></td>
+                            <td>Plug &amp; play tools with OAuth credential management &mdash; expose and govern MCP tools</td>
+                            <td><span class="tag tag-mcp">MCP</span><span class="tag tag-security">Security</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/mcp-client-authorization" target="_blank">MCP Client Authorization</a></td>
+                            <td>Implement MCP with the OAuth 2.0 client authorization flow for secure tool access</td>
+                            <td><span class="tag tag-mcp">MCP</span><span class="tag tag-security">Security</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/mcp-from-api" target="_blank">MCP from API</a></td>
+                            <td>Turn any existing REST API into an MCP server via APIM &mdash; no code changes to the backend</td>
+                            <td><span class="tag tag-mcp">MCP</span><span class="tag tag-agents">Integration</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/mcp-registry-apic" target="_blank">MCP Registry (API Center)</a></td>
+                            <td>Register and discover MCP servers in Azure API Center &mdash; centralized tool catalog</td>
+                            <td><span class="tag tag-mcp">MCP</span><span class="tag tag-security">Governance</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/ai-foundry-private-mcp" target="_blank">Private MCP (Foundry)</a></td>
+                            <td>Private connectivity for MCP servers with AI Foundry &mdash; enterprise-grade secure tool access</td>
+                            <td><span class="tag tag-mcp">MCP</span><span class="tag tag-security">Private</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4 style="margin: 24px 0 12px; color: var(--ms-dark);">AI Gateway for Agents</h4>
+                <table class="lab-table">
+                    <thead><tr><th>Lab</th><th>What it does</th><th>Addresses</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/ai-agent-service" target="_blank">AI Agent Service</a></td>
+                            <td>Foundry Agent Service with multi-service control through the AI gateway</td>
+                            <td><span class="tag tag-agents">Agents</span><span class="tag tag-security">Governance</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/openai-agents" target="_blank">OpenAI Agents SDK</a></td>
+                            <td>Use OpenAI Agents SDK with Azure OpenAI and APIM-managed tools</td>
+                            <td><span class="tag tag-agents">Agents</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/mcp-a2a-agents" target="_blank">A2A-Enabled Agents</a></td>
+                            <td>Agent-to-Agent protocol with models and MCP plug &amp; play tools &mdash; full multi-agent orchestration</td>
+                            <td><span class="tag tag-agents">Agents</span><span class="tag tag-mcp">A2A</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/gemini-mcp-agents" target="_blank">Gemini MCP Agents</a></td>
+                            <td>Google Gemini models with MCP tools through the gateway &mdash; multi-provider agents</td>
+                            <td><span class="tag tag-agents">Agents</span><span class="tag tag-multi">Multi-Provider</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/foundry-iq-agent-svc" target="_blank">Foundry IQ Agent Service</a></td>
+                            <td>Foundry IQ with Agent Service &mdash; knowledge-grounded agents through the gateway</td>
+                            <td><span class="tag tag-agents">Agents</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4 style="margin: 24px 0 12px; color: var(--ms-dark);">Security &amp; Enterprise</h4>
+                <table class="lab-table">
+                    <thead><tr><th>Lab</th><th>What it does</th><th>Addresses</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/access-controlling" target="_blank">Access Controlling</a></td>
+                            <td>OAuth 2.0, managed identities, subscription keys &mdash; secure access patterns for AI APIs</td>
+                            <td><span class="tag tag-security">Security</span><span class="tag tag-security">Governance</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/content-safety" target="_blank">Content Safety</a></td>
+                            <td>Azure AI Content Safety integration &mdash; prompt filtering and content moderation at the gateway</td>
+                            <td><span class="tag tag-security">Safety</span><span class="tag tag-security">Governance</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/private-connectivity" target="_blank">Private Connectivity</a></td>
+                            <td>VNet integration, private endpoints &mdash; fully private AI gateway deployment</td>
+                            <td><span class="tag tag-security">Security</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/zero-to-production" target="_blank">Zero to Production</a></td>
+                            <td>Complete end-to-end enterprise setup &mdash; from nothing to production-ready AI gateway</td>
+                            <td><span class="tag tag-security">Enterprise</span><span class="tag tag-perf">Production</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/foundry-e2e-private" target="_blank">Foundry E2E Private</a></td>
+                            <td>End-to-end private deployment of Foundry with APIM &mdash; zero public exposure</td>
+                            <td><span class="tag tag-security">Private</span><span class="tag tag-security">Enterprise</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- APIM Samples -->
+        <div class="lab-section">
+            <div class="lab-section-header">
+                <h3>APIM Samples &mdash; Policy Playground</h3>
+                <p>High-fidelity APIM infrastructures and real-world samples. Deploy common architectures and experiment with policies. Includes a <strong>Costing sample</strong> specifically for AI token/PTU tracking including streaming (SSE). &star; 91 stars</p>
+                <a href="https://github.com/Azure-Samples/Apim-Samples" target="_blank">github.com/Azure-Samples/Apim-Samples</a> &middot; <a href="https://aka.ms/apim/samples" target="_blank">aka.ms/apim/samples</a>
+            </div>
+            <div class="lab-section-body">
+                <table class="lab-table">
+                    <thead><tr><th>Sample</th><th>What it does</th><th>Addresses</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="https://github.com/Azure-Samples/Apim-Samples/tree/main/samples" target="_blank">Costing &amp; Showback</a></td>
+                            <td>Track and allocate API costs per business unit using APIM subscriptions, Entra ID app tracking, and AI Gateway token/PTU tracking across Chat Completions and Responses APIs (including SSE streaming token capture)</td>
+                            <td><span class="tag tag-finops">FinOps</span><span class="tag tag-obs">Observability</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/Azure-Samples/Apim-Samples/tree/main/samples" target="_blank">AuthX / AuthX Pro</a></td>
+                            <td>Authentication and role-based authorization patterns &mdash; from simple to multi-API with policy fragments</td>
+                            <td><span class="tag tag-security">Security</span><span class="tag tag-security">Governance</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/Azure-Samples/Apim-Samples/tree/main/samples" target="_blank">Load Balancing</a></td>
+                            <td>Priority and weighted load balancing across backends with Container Apps</td>
+                            <td><span class="tag tag-perf">Performance</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/Azure-Samples/Apim-Samples/tree/main/samples" target="_blank">OAuth 3rd-Party (Credential Manager)</a></td>
+                            <td>APIM Credential Manager with third-party OAuth providers &mdash; pattern for enterprise integrations</td>
+                            <td><span class="tag tag-security">Security</span><span class="tag tag-agents">Integration</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="margin-top: 12px; font-size: 0.85rem; color: #605e5c;"><strong>Architectures included:</strong> Simple APIM &middot; APIM + Container Apps &middot; Front Door + APIM (Private Link) &middot; Application Gateway + APIM (VNet/Private Link)</p>
+            </div>
+        </div>
+
+        <!-- AI Hub Gateway -->
+        <div class="lab-section">
+            <div class="lab-section-header">
+                <h3>AI Hub Gateway Landing Zone (Citadel)</h3>
+                <p>Enterprise-ready solution accelerator for centralized AI API gateway with governance, monitoring, and cost management. Includes <strong>AI Citadel Governance Hub v1</strong> (preview). One-click deploy with <code>azd up</code>. &star; 290 stars</p>
+                <a href="https://github.com/Azure-Samples/ai-hub-gateway-solution-accelerator" target="_blank">github.com/Azure-Samples/ai-hub-gateway-solution-accelerator</a>
+            </div>
+            <div class="lab-section-body">
+                <table class="lab-table">
+                    <thead><tr><th>Capability</th><th>Details</th><th>Addresses</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td>Enterprise Governance</td>
+                            <td>Centralized access control, managed identity, multi-tenant isolation, per-use-case onboarding automation</td>
+                            <td><span class="tag tag-security">Governance</span></td>
+                        </tr>
+                        <tr>
+                            <td>Intelligent Routing</td>
+                            <td>Priority-based backend selection with failover, regional load balancing, dynamic throttling for PTU</td>
+                            <td><span class="tag tag-perf">Performance</span><span class="tag tag-finops">Cost</span></td>
+                        </tr>
+                        <tr>
+                            <td>Cost Management</td>
+                            <td>Real-time usage tracking, charge-back allocation, token-level monitoring, Power BI dashboards</td>
+                            <td><span class="tag tag-finops">FinOps</span></td>
+                        </tr>
+                        <tr>
+                            <td>Security &amp; Compliance</td>
+                            <td>Private endpoints, VNet, Entra ID JWT validation, PII detection &amp; masking, Content Safety</td>
+                            <td><span class="tag tag-security">Security</span><span class="tag tag-security">Privacy</span></td>
+                        </tr>
+                        <tr>
+                            <td>Monitoring</td>
+                            <td>Application Insights dashboards, throttling alerts, usage ingestion via Event Hub + Cosmos DB</td>
+                            <td><span class="tag tag-obs">Observability</span></td>
+                        </tr>
+                        <tr>
+                            <td>AI Citadel (Preview)</td>
+                            <td>AI Registry for LLMs/tools/agents, Citadel Contracts (IaC governance), agent landing zones</td>
+                            <td><span class="tag tag-agents">Agents</span><span class="tag tag-security">Governance</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="margin-top: 12px; font-size: 0.85rem; color: #605e5c;"><strong>Deploys:</strong> API Management &middot; App Insights &middot; Event Hub &middot; Azure OpenAI (3 regions) &middot; Content Safety &middot; Language Service (PII) &middot; Cosmos DB &middot; Logic App &middot; Managed Identity &middot; VNet</p>
+            </div>
+        </div>
+
+        <!-- Additional repos -->
+        <div class="lab-section">
+            <div class="lab-section-header">
+                <h3>Additional Repositories &amp; Resources</h3>
+                <p>Architecture references, pattern implementations, tools, and learning material.</p>
+            </div>
+            <div class="lab-section-body">
+                <table class="lab-table">
+                    <thead><tr><th>Repository</th><th>What it is</th><th>Use it for</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="https://github.com/Azure-Samples/APIM-Unified-AI-Gateway-Sample" target="_blank">Unified AI Gateway Sample</a></td>
+                            <td>Complete implementation of the unified AI gateway design pattern &mdash; one endpoint, many providers</td>
+                            <td><span class="tag tag-multi">Multi-Provider</span><span class="tag tag-arch">Architecture</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/Azure-Samples/genai-gateway-apim" target="_blank">GenAI Gateway APIM (Node.js)</a></td>
+                            <td>Node.js reference implementation for Azure OpenAI with API Management gateway patterns</td>
+                            <td><span class="tag tag-perf">Sample Code</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/Azure/azure-api-management-policy-toolkit" target="_blank">APIM Policy Toolkit</a></td>
+                            <td>Author APIM policies in C# with unit testing, IDE support, and CI/CD integration</td>
+                            <td><span class="tag tag-security">DevOps</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/Azure/api-management-policy-snippets" target="_blank">APIM Policy Snippets</a></td>
+                            <td>Curated library of reusable APIM policy XML snippets for common scenarios</td>
+                            <td><span class="tag tag-security">Policies</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://microsoft.github.io/finops-toolkit/" target="_blank">Microsoft FinOps Toolkit</a></td>
+                            <td>Open-source tools for FinOps on Azure &mdash; cost analysis, budgets, FOCUS format, AI spend dashboards</td>
+                            <td><span class="tag tag-finops">FinOps</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://aka.ms/ai-gateway/workshop" target="_blank">AI Gateway Workshop</a></td>
+                            <td>Step-by-step guided workshop for implementing all AI gateway patterns in a structured format</td>
+                            <td><span class="tag tag-arch">Workshop</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/Azure-Samples/AI-Gateway/blob/main/docs/media/Enterprise%20AI%20Gateway%20eBook%20-%20Feb%202026.pdf" target="_blank">Enterprise AI Gateway e-Book (PDF)</a></td>
+                            <td>Comprehensive end-to-end view of the Enterprise AI Gateway pattern &mdash; why a centralized governance layer is essential for AI at scale</td>
+                            <td><span class="tag tag-arch">Architecture</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://aka.ms/foundry-citadel" target="_blank">Foundry Citadel</a></td>
+                            <td>Enterprise governance and landing zone patterns for Microsoft Foundry deployments</td>
+                            <td><span class="tag tag-security">Enterprise</span></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
 
     <!-- FINOPS -->
     <section id="finops" style="margin-bottom: 48px;">
-        <h2>FinOps — Cost Attribution & Control</h2>
+        <h2>FinOps &mdash; Cost Attribution &amp; Control</h2>
         <div class="key-points">
             <strong>How cost attribution works end-to-end:</strong>
             <ul>
-                <li><strong>Per-agent metering:</strong> emit-token-metric policy tags every call with agent-id dimension → filter in Azure Monitor</li>
-                <li><strong>Per-use-case metering:</strong> Same policy tags calls with use-case-id → aggregate across multiple agents</li>
-                <li><strong>Budget enforcement:</strong> token-limit policy caps TPM per subscription/team/agent</li>
+                <li><strong>Per-agent metering:</strong> emit-token-metric policy tags every call with agent-id dimension &rarr; filter in Azure Monitor</li>
+                <li><strong>Per-use-case metering:</strong> Same policy tags calls with use-case-id &rarr; aggregate across multiple agents in a workflow</li>
+                <li><strong>Budget enforcement:</strong> token-limit policy caps TPM per subscription/team/agent &mdash; hard limits or soft warnings</li>
                 <li><strong>Cost optimization:</strong> Model router selects cheapest model meeting quality bar; semantic caching avoids repeat calls</li>
                 <li><strong>Reporting:</strong> FinOps toolkit / FinOps hubs consolidate Azure AI spend in FOCUS format for executive dashboards</li>
+                <li><strong>Streaming tracking:</strong> APIM Samples Costing lab shows how to correctly capture SSE streaming token usage (non-trivial in APIM)</li>
             </ul>
         </div>
         <div class="doc-links" style="margin-top: 16px;">
             <div class="label">Key Resources</div>
             <ul>
+                <li><a href="https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/finops-framework" target="_blank">Lab: FinOps Framework (AI-Gateway repo)</a></li>
+                <li><a href="https://github.com/Azure-Samples/Apim-Samples" target="_blank">Lab: Costing &amp; Showback (APIM-Samples repo)</a></li>
                 <li><a href="https://learn.microsoft.com/en-us/azure/api-management/llm-emit-token-metric-policy" target="_blank">emit-token-metric policy reference</a></li>
                 <li><a href="https://learn.microsoft.com/en-us/azure/api-management/llm-token-limit-policy" target="_blank">token-limit policy reference</a></li>
-                <li><a href="https://microsoft.github.io/finops-toolkit/" target="_blank">Microsoft FinOps toolkit (GitHub)</a></li>
+                <li><a href="https://microsoft.github.io/finops-toolkit/" target="_blank">Microsoft FinOps toolkit</a></li>
                 <li><a href="https://learn.microsoft.com/en-us/azure/cost-management-billing/" target="_blank">Azure Cost Management</a></li>
             </ul>
         </div>
@@ -729,171 +924,155 @@
 
     <!-- OBSERVABILITY -->
     <section id="observability" style="margin-bottom: 48px;">
-        <h2>Observability — OpenTelemetry + Datadog</h2>
+        <h2>Observability &mdash; OpenTelemetry + Any Collector</h2>
         <div class="key-points">
             <strong>Telemetry flow:</strong>
             <ul>
                 <li>Foundry Agent Service emits OpenTelemetry traces automatically (server-side, zero-code)</li>
-                <li>Traces include: latency, token counts, tool calls, run steps, exceptions, hand-offs</li>
-                <li>Content recording is opt-in (default: metadata only → DSGVO compliant)</li>
-                <li>Traces stored in Azure Monitor Application Insights</li>
-                <li>Same OTel pipeline exports to Datadog via standard OTLP exporter</li>
-                <li>Datadog adds native Azure OpenAI + Foundry integrations + LLM Observability dashboard</li>
+                <li>Traces include: latency, token counts, tool calls, run steps, exceptions, hand-offs between agents</li>
+                <li>Content recording is opt-in (default: metadata only &rarr; GDPR/DSGVO compliant out of the box)</li>
+                <li>Traces stored in Azure Monitor Application Insights &mdash; query with KQL, build dashboards</li>
+                <li>Same OTel pipeline exports to any OTLP-compatible collector (Datadog, Grafana, Splunk, New Relic)</li>
+                <li>APIM adds gateway-level logging: built-in LLM logging policy captures token usage per consumer</li>
+                <li>Datadog ships native Azure OpenAI + Foundry integrations + LLM Observability dashboard</li>
             </ul>
         </div>
         <div class="doc-links" style="margin-top: 16px;">
             <div class="label">Key Resources</div>
             <ul>
-                <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/observability/how-to/trace-agent-setup" target="_blank">Foundry — Trace agent setup (OpenTelemetry)</a></li>
-                <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/observability/how-to/how-to-monitor-agents-dashboard" target="_blank">Monitor agents dashboard</a></li>
-                <li><a href="https://docs.datadoghq.com/integrations/azure_ai_foundry/" target="_blank">Datadog — Azure AI Foundry integration</a></li>
-                <li><a href="https://docs.datadoghq.com/integrations/azure_openai/" target="_blank">Datadog — Azure OpenAI integration</a></li>
-                <li><a href="https://docs.datadoghq.com/llm_observability/" target="_blank">Datadog — LLM Observability</a></li>
+                <li><a href="https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/built-in-logging" target="_blank">Lab: Built-in Logging (AI-Gateway repo)</a></li>
+                <li><a href="https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/token-metrics-emitting" target="_blank">Lab: Token Metrics Emitting (AI-Gateway repo)</a></li>
+                <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/observability/how-to/trace-agent-setup" target="_blank">Foundry &mdash; Trace agent setup</a></li>
+                <li><a href="https://learn.microsoft.com/en-us/azure/api-management/api-management-howto-llm-logs" target="_blank">APIM &mdash; Logging token usage &amp; completions</a></li>
+                <li><a href="https://docs.datadoghq.com/integrations/azure_ai_foundry/" target="_blank">Datadog &mdash; Azure AI Foundry integration</a></li>
+                <li><a href="https://docs.datadoghq.com/llm_observability/" target="_blank">Datadog &mdash; LLM Observability</a></li>
                 <li><a href="https://opentelemetry.io/docs/specs/semconv/gen-ai/" target="_blank">OpenTelemetry GenAI semantic conventions</a></li>
             </ul>
         </div>
     </section>
 
-    <!-- ARCHITECTURE -->
-    <section id="architecture" style="margin-bottom: 48px;">
-        <h2>Architecture & Reference Material</h2>
-        <div class="resources-grid">
-            <div class="resource-card">
-                <span class="badge badge-arch">Architecture</span>
-                <h4>AI Gateway Reference Architecture</h4>
-                <p>End-to-end reference architecture for building a GenAI gateway with APIM.</p>
-                <a href="https://learn.microsoft.com/en-us/ai/playbook/technology-guidance/generative-ai/dev-starters/genai-gateway/reference-architectures/apim-based" target="_blank">View →</a>
-            </div>
-            <div class="resource-card">
-                <span class="badge badge-arch">Architecture</span>
-                <h4>Gateway Design Patterns</h4>
-                <p>Designing and implementing a gateway solution with Azure OpenAI resources.</p>
-                <a href="https://learn.microsoft.com/en-us/ai/playbook/technology-guidance/generative-ai/dev-starters/genai-gateway/" target="_blank">View →</a>
-            </div>
-            <div class="resource-card">
-                <span class="badge badge-repo">Accelerator</span>
-                <h4>AI Hub Gateway Solution Accelerator</h4>
-                <p>Landing zone accelerator for deploying APIM as an AI gateway hub.</p>
-                <a href="https://github.com/Azure-Samples/ai-hub-gateway-solution-accelerator" target="_blank">GitHub →</a>
-            </div>
-            <div class="resource-card">
-                <span class="badge badge-lab">Lab</span>
-                <h4>AI Gateway Capabilities Labs</h4>
-                <p>Hands-on labs for all APIM AI gateway features: token metrics, caching, load balancing, MCP.</p>
-                <a href="https://github.com/Azure-Samples/ai-gateway" target="_blank">GitHub →</a>
-            </div>
-            <div class="resource-card">
-                <span class="badge badge-lab">Workshop</span>
-                <h4>AI Gateway Workshop</h4>
-                <p>Step-by-step workshop for implementing AI gateway patterns.</p>
-                <a href="https://aka.ms/ai-gateway/workshop" target="_blank">Workshop →</a>
-            </div>
-            <div class="resource-card">
-                <span class="badge badge-repo">Sample</span>
-                <h4>Unified AI Gateway Sample</h4>
-                <p>Complete sample implementing the unified AI gateway design pattern.</p>
-                <a href="https://github.com/Azure-Samples/APIM-Unified-AI-Gateway-Sample" target="_blank">GitHub →</a>
-            </div>
-            <div class="resource-card">
-                <span class="badge badge-repo">Sample</span>
-                <h4>GenAI Gateway with APIM (Node.js)</h4>
-                <p>Node.js reference implementation for Azure OpenAI with API Management.</p>
-                <a href="https://github.com/Azure-Samples/genai-gateway-apim" target="_blank">GitHub →</a>
-            </div>
-            <div class="resource-card">
-                <span class="badge badge-docs">Docs</span>
-                <h4>Microsoft Agent Framework</h4>
-                <p>Framework for building production-grade multi-agent systems with orchestration.</p>
-                <a href="https://learn.microsoft.com/en-us/agent-framework/" target="_blank">Documentation →</a>
-            </div>
+    <!-- GOVERNANCE & PRIVACY -->
+    <section id="governance" style="margin-bottom: 48px;">
+        <h2>Governance &amp; Data Privacy</h2>
+        <div class="key-points">
+            <strong>Governance stack:</strong>
+            <ul>
+                <li><strong>APIM AI Gateway:</strong> Central policy enforcement (auth, content safety, rate limits) across all models/agents</li>
+                <li><strong>Microsoft Entra ID:</strong> Identity for users, apps, and agents (Entra Agent ID). OAuth 2.0, managed identities.</li>
+                <li><strong>Azure Policy:</strong> Control which model publishers/SKUs can be deployed. Organizational guardrails.</li>
+                <li><strong>Azure AI Content Safety:</strong> Real-time prompt/completion filtering. Integrated as APIM policy.</li>
+                <li><strong>Microsoft Purview:</strong> Data governance, classification, lineage, compliance monitoring.</li>
+                <li><strong>Foundry Control Plane:</strong> Central management of agents at scale &mdash; registration, limits, monitoring.</li>
+            </ul>
+        </div>
+        <div class="key-points" style="margin-top: 16px; border-left-color: var(--ms-green);">
+            <strong>Data Privacy / GDPR key points:</strong>
+            <ul>
+                <li>Tracing captures metadata only by default &mdash; message content requires explicit opt-in (both flags default <code>false</code>)</li>
+                <li>EU Data Boundary: customer data stored/processed in EU/EFTA. System logs pseudonymized per GDPR Art. 4(5)</li>
+                <li>Microsoft does not use customer data to train shared models</li>
+                <li>Microsoft does not share logs or content with model providers</li>
+                <li>PII detection &amp; masking available at the gateway layer (AI Hub accelerator includes this)</li>
+            </ul>
+        </div>
+        <div class="doc-links" style="margin-top: 16px;">
+            <div class="label">Key Resources</div>
+            <ul>
+                <li><a href="https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/access-controlling" target="_blank">Lab: Access Controlling</a></li>
+                <li><a href="https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/content-safety" target="_blank">Lab: Content Safety</a></li>
+                <li><a href="https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/private-connectivity" target="_blank">Lab: Private Connectivity</a></li>
+                <li><a href="https://learn.microsoft.com/en-us/azure/api-management/secure-mcp-servers" target="_blank">Secure access to MCP servers</a></li>
+                <li><a href="https://www.microsoft.com/en-us/trust-center/privacy/european-data-boundary-eudb" target="_blank">EU Data Boundary (Trust Center)</a></li>
+                <li><a href="https://learn.microsoft.com/en-us/privacy/eudb/eu-data-boundary-learn" target="_blank">What is the EU Data Boundary?</a></li>
+                <li><a href="https://www.microsoft.com/en-us/security/blog/2025/05/01/securing-ai-agents/" target="_blank">Securing AI agents (Microsoft Security blog)</a></li>
+            </ul>
         </div>
     </section>
 
-    <!-- ALL RESOURCES -->
-    <section id="resources" style="margin-bottom: 48px;">
-        <h2>Complete Documentation Links</h2>
-        <p style="margin-bottom: 20px;">All customer-shareable public documentation in one place.</p>
+    <!-- ALL DOCS -->
+    <section id="docs" style="margin-bottom: 48px;">
+        <h2>Complete Documentation Reference</h2>
 
         <h3 style="margin-top: 24px;">Microsoft Foundry</h3>
         <div class="doc-links">
             <ul>
-                <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/" target="_blank">Microsoft Foundry — Documentation Hub</a></li>
+                <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/" target="_blank">Microsoft Foundry &mdash; Documentation Hub</a></li>
                 <li><a href="https://ai.azure.com/" target="_blank">Microsoft Foundry Portal</a></li>
-                <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure" target="_blank">Model Catalog (11,000+ models)</a></li>
+                <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure" target="_blank">Model Catalog</a></li>
                 <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-models/concepts/model-router" target="_blank">Model Router</a></li>
                 <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/agents/overview" target="_blank">Foundry Agent Service</a></li>
                 <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/develop/sdk-overview" target="_blank">Foundry SDKs</a></li>
-                <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/observability/how-to/trace-agent-setup" target="_blank">Agent Tracing (OpenTelemetry)</a></li>
+                <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/observability/how-to/trace-agent-setup" target="_blank">Agent Tracing</a></li>
                 <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/observability/how-to/evaluate-agent" target="_blank">Evaluate Agentic Workflows</a></li>
-                <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/observability/how-to/how-to-monitor-agents-dashboard" target="_blank">Monitor Agents Dashboard</a></li>
                 <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/control-plane/overview" target="_blank">Foundry Control Plane</a></li>
                 <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/control-plane/how-to-manage-agents" target="_blank">Manage Agents at Scale</a></li>
                 <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/control-plane/register-custom-agent" target="_blank">Register Custom Agents</a></li>
                 <li><a href="https://learn.microsoft.com/en-us/azure/foundry-local/get-started" target="_blank">Foundry Local (on-device)</a></li>
+                <li><a href="https://learn.microsoft.com/en-us/agent-framework/" target="_blank">Microsoft Agent Framework</a></li>
             </ul>
         </div>
 
-        <h3 style="margin-top: 24px;">Azure API Management — AI Gateway</h3>
+        <h3 style="margin-top: 24px;">Azure API Management &mdash; AI Gateway</h3>
         <div class="doc-links">
             <ul>
                 <li><a href="https://learn.microsoft.com/en-us/azure/api-management/genai-gateway-capabilities" target="_blank">AI Gateway Capabilities (Overview)</a></li>
                 <li><a href="https://learn.microsoft.com/en-us/azure/api-management/unified-model-api" target="_blank">Unified Model API</a></li>
                 <li><a href="https://learn.microsoft.com/en-us/azure/api-management/export-rest-mcp-server" target="_blank">Expose REST API as MCP Server</a></li>
-                <li><a href="https://learn.microsoft.com/en-us/azure/api-management/expose-existing-mcp-server" target="_blank">Expose & Govern Existing MCP Server</a></li>
+                <li><a href="https://learn.microsoft.com/en-us/azure/api-management/expose-existing-mcp-server" target="_blank">Expose &amp; Govern Existing MCP Server</a></li>
                 <li><a href="https://learn.microsoft.com/en-us/azure/api-management/agent-to-agent-api" target="_blank">Import A2A Agent API</a></li>
                 <li><a href="https://learn.microsoft.com/en-us/azure/api-management/llm-emit-token-metric-policy" target="_blank">emit-token-metric Policy</a></li>
                 <li><a href="https://learn.microsoft.com/en-us/azure/api-management/llm-token-limit-policy" target="_blank">token-limit Policy</a></li>
                 <li><a href="https://learn.microsoft.com/en-us/azure/api-management/azure-openai-enable-semantic-caching" target="_blank">Semantic Caching</a></li>
                 <li><a href="https://learn.microsoft.com/en-us/azure/api-management/llm-content-safety-policy" target="_blank">Content Safety Policy</a></li>
-                <li><a href="https://learn.microsoft.com/en-us/azure/api-management/api-management-authenticate-authorize-ai-apis" target="_blank">Authenticate & Authorize AI APIs</a></li>
+                <li><a href="https://learn.microsoft.com/en-us/azure/api-management/api-management-authenticate-authorize-ai-apis" target="_blank">Authenticate &amp; Authorize AI APIs</a></li>
                 <li><a href="https://learn.microsoft.com/en-us/azure/api-management/secure-mcp-servers" target="_blank">Secure MCP Servers</a></li>
-                <li><a href="https://learn.microsoft.com/en-us/azure/api-management/backends" target="_blank">Backends (Load Balancing & Circuit Breaker)</a></li>
-                <li><a href="https://learn.microsoft.com/en-us/azure/api-management/api-management-howto-llm-logs" target="_blank">Logging Token Usage & Completions</a></li>
+                <li><a href="https://learn.microsoft.com/en-us/azure/api-management/backends" target="_blank">Backends (Load Balancing &amp; Circuit Breaker)</a></li>
+                <li><a href="https://learn.microsoft.com/en-us/azure/api-management/api-management-howto-llm-logs" target="_blank">Logging Token Usage &amp; Completions</a></li>
+                <li><a href="https://learn.microsoft.com/en-us/azure/api-management/openai-compatible-llm-api" target="_blank">Import OpenAI-compatible LLM API</a></li>
                 <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/configuration/enable-ai-api-management-gateway-portal" target="_blank">AI Gateway in Foundry Portal</a></li>
                 <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/agents/how-to/ai-gateway" target="_blank">Bring Your Own Model to Agent Service</a></li>
+                <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/agents/how-to/tools/governance" target="_blank">Govern Tools with AI Gateway</a></li>
             </ul>
         </div>
 
-        <h3 style="margin-top: 24px;">Governance, Security & Privacy</h3>
+        <h3 style="margin-top: 24px;">Architecture &amp; Design Patterns</h3>
+        <div class="doc-links">
+            <ul>
+                <li><a href="https://learn.microsoft.com/en-us/ai/playbook/technology-guidance/generative-ai/dev-starters/genai-gateway/reference-architectures/apim-based" target="_blank">AI Gateway Reference Architecture (APIM-based)</a></li>
+                <li><a href="https://learn.microsoft.com/en-us/ai/playbook/technology-guidance/generative-ai/dev-starters/genai-gateway/" target="_blank">GenAI Gateway Design Patterns</a></li>
+                <li><a href="https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/azure-openai-gateway-multi-backend" target="_blank">Gateway in front of multiple Azure OpenAI deployments</a></li>
+                <li><a href="https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/app-platform/api-management/landing-zone-accelerator" target="_blank">APIM Landing Zone Accelerator</a></li>
+            </ul>
+        </div>
+
+        <h3 style="margin-top: 24px;">Governance, Security &amp; Privacy</h3>
         <div class="doc-links">
             <ul>
                 <li><a href="https://learn.microsoft.com/en-us/azure/ai-services/content-safety/overview" target="_blank">Azure AI Content Safety</a></li>
                 <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/responsible-use-of-ai-overview" target="_blank">Responsible AI in Foundry</a></li>
                 <li><a href="https://www.microsoft.com/en-us/trust-center/privacy/european-data-boundary-eudb" target="_blank">EU Data Boundary (Trust Center)</a></li>
                 <li><a href="https://learn.microsoft.com/en-us/privacy/eudb/eu-data-boundary-learn" target="_blank">What is the EU Data Boundary?</a></li>
-                <li><a href="https://www.microsoft.com/en-us/security/blog/2025/05/01/securing-ai-agents/" target="_blank">Securing AI Agents (Microsoft Security)</a></li>
+                <li><a href="https://www.microsoft.com/en-us/security/blog/2025/05/01/securing-ai-agents/" target="_blank">Securing AI Agents</a></li>
                 <li><a href="https://learn.microsoft.com/en-us/azure/ai-foundry/control-plane/how-to-enforce-limits-models" target="_blank">Enforce Token Limits for Models</a></li>
             </ul>
         </div>
 
-        <h3 style="margin-top: 24px;">FinOps & Cost Management</h3>
+        <h3 style="margin-top: 24px;">FinOps &amp; Cost Management</h3>
         <div class="doc-links">
             <ul>
                 <li><a href="https://microsoft.github.io/finops-toolkit/" target="_blank">Microsoft FinOps Toolkit</a></li>
-                <li><a href="https://learn.microsoft.com/en-us/azure/cost-management-billing/" target="_blank">Azure Cost Management & Billing</a></li>
+                <li><a href="https://learn.microsoft.com/en-us/azure/cost-management-billing/" target="_blank">Azure Cost Management &amp; Billing</a></li>
                 <li><a href="https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/provisioned-throughput" target="_blank">Provisioned Throughput Units (PTU)</a></li>
             </ul>
         </div>
 
-        <h3 style="margin-top: 24px;">Datadog Integration</h3>
+        <h3 style="margin-top: 24px;">Observability &amp; Datadog</h3>
         <div class="doc-links">
             <ul>
-                <li><a href="https://docs.datadoghq.com/integrations/azure_ai_foundry/" target="_blank">Datadog — Azure AI Foundry Integration</a></li>
-                <li><a href="https://docs.datadoghq.com/integrations/azure_openai/" target="_blank">Datadog — Azure OpenAI Integration</a></li>
-                <li><a href="https://docs.datadoghq.com/llm_observability/" target="_blank">Datadog — LLM Observability</a></li>
-            </ul>
-        </div>
-
-        <h3 style="margin-top: 24px;">Labs, Workshops & Code Samples</h3>
-        <div class="doc-links">
-            <ul>
-                <li><a href="https://github.com/Azure-Samples/ai-gateway" target="_blank">AI Gateway Capabilities Labs</a></li>
-                <li><a href="https://aka.ms/ai-gateway/workshop" target="_blank">AI Gateway Workshop</a></li>
-                <li><a href="https://github.com/Azure-Samples/ai-hub-gateway-solution-accelerator" target="_blank">AI Hub Gateway Solution Accelerator</a></li>
-                <li><a href="https://github.com/Azure-Samples/APIM-Unified-AI-Gateway-Sample" target="_blank">Unified AI Gateway Sample</a></li>
-                <li><a href="https://github.com/Azure-Samples/genai-gateway-apim" target="_blank">GenAI Gateway APIM (Node.js)</a></li>
-                <li><a href="https://learn.microsoft.com/en-us/ai/playbook/technology-guidance/generative-ai/dev-starters/genai-gateway/" target="_blank">GenAI Gateway Design Patterns</a></li>
-                <li><a href="https://learn.microsoft.com/en-us/ai/playbook/technology-guidance/generative-ai/dev-starters/genai-gateway/reference-architectures/apim-based" target="_blank">AI Gateway Reference Architecture (APIM-based)</a></li>
+                <li><a href="https://docs.datadoghq.com/integrations/azure_ai_foundry/" target="_blank">Datadog &mdash; Azure AI Foundry</a></li>
+                <li><a href="https://docs.datadoghq.com/integrations/azure_openai/" target="_blank">Datadog &mdash; Azure OpenAI</a></li>
+                <li><a href="https://docs.datadoghq.com/llm_observability/" target="_blank">Datadog &mdash; LLM Observability</a></li>
+                <li><a href="https://opentelemetry.io/docs/specs/semconv/gen-ai/" target="_blank">OpenTelemetry GenAI Semantic Conventions</a></li>
             </ul>
         </div>
 
@@ -904,14 +1083,28 @@
                 <li><a href="https://docs.mulesoft.com/ai-chain-connector/latest/" target="_blank">MuleSoft AI Chain Connector Docs</a></li>
             </ul>
         </div>
+
+        <h3 style="margin-top: 24px;">Training &amp; Learning</h3>
+        <div class="doc-links">
+            <ul>
+                <li><a href="https://learn.microsoft.com/en-us/training/browse/?products=azure-api-management" target="_blank">APIM Learning Modules</a></li>
+                <li><a href="https://aka.ms/ai-gateway/workshop" target="_blank">AI Gateway Workshop</a></li>
+                <li><a href="https://aka.ms/apimlove" target="_blank">APIM Love &mdash; Community hub</a></li>
+                <li><a href="https://techcommunity.microsoft.com/tag/API%20Management" target="_blank">API Management Tech Community</a></li>
+            </ul>
+        </div>
     </section>
 
 </div>
 
 <footer>
-    <p>Microsoft × RheinEnergie · Agentic-AI Platform Content Hub</p>
-    <p style="margin-top: 8px;">Prepared by Isha Salania — Solution Engineer, AI & Apps, Microsoft Germany</p>
-    <p style="margin-top: 8px; opacity: 0.7;">All documentation links are public Microsoft Learn / microsoft.com URLs safe to share directly.</p>
+    <p>Enterprise Agentic-AI Platform &mdash; APIM AI Gateway &amp; Microsoft Foundry</p>
+    <p style="margin-top: 8px;">All links are public Microsoft Learn / microsoft.com / GitHub URLs &mdash; safe to share directly.</p>
+    <p style="margin-top: 8px; opacity: 0.7;">
+        <a href="https://aka.ms/ai-gateway/labs" target="_blank">aka.ms/ai-gateway/labs</a> &middot;
+        <a href="https://aka.ms/apim/samples" target="_blank">aka.ms/apim/samples</a> &middot;
+        <a href="https://aka.ms/apimlove" target="_blank">aka.ms/apimlove</a>
+    </p>
 </footer>
 
 </body>
